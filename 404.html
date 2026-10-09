@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OP/AL</title>
+<link rel="canonical" href="https://more-than.design/">
+<meta name="robots" content="noindex, follow">
+<!-- The whole point of this page: it is a door, not a room. Three ways out,
+     in the order they fire. The script goes first and is instant; the meta
+     refresh catches a browser with scripting off; the link catches whatever
+     is left, including a person who arrived here by accident. -->
+<script>
+  (function () {
+    var to = 'https://more-than.design' + location.pathname + location.search + location.hash;
+    location.replace(to);          // replace, not assign: Back should not land here again
+  })();
+</script>
+<meta http-equiv="refresh" content="0; url=https://more-than.design/">
+<style>
+  :root { --paper: #fff; --ink: #111; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --paper: #111; --ink: #f4f4f4; }
+  }
+  :root[data-theme="dark"] { --paper: #111; --ink: #f4f4f4; }
+  html, body { height: 100%; margin: 0; }
+  body { background: var(--paper); color: var(--ink);
+    font: 400 1rem/1.5 Georgia, "Times New Roman", serif;
+    display: flex; align-items: center; justify-content: center;
+    padding: 0 16px; text-align: center; }
+  a { color: inherit; text-underline-offset: .25em; }
+  p { max-width: 28em; }
+</style>
+</head>
+<body>
+  <p>OP/AL is at <a href="https://more-than.design/">more-than.design</a>.</p>
+</body>
+</html>
